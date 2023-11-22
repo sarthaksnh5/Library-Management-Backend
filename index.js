@@ -37,7 +37,7 @@ app.use(express.urlencoded({extended: false}));
 
 // Connect to DB
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://root:root@testserver.qfkgqaj.mongodb.net/", {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://sarthak:sarthak@testserver.4axxzg3.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
