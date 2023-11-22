@@ -17,6 +17,7 @@ const reviewRouter = require("./routes/reviewRouter")
 
 
 console.log(process.env.NODE_ENV)
+console.log(process.env.MONGO_URI)
 
 // Configure dotenv for environment variables in production
 if (process.env.NODE_ENV !== "production") {
@@ -36,7 +37,7 @@ app.use(express.urlencoded({extended: false}));
 
 // Connect to DB
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://root:root@testserver.qfkgqaj.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
