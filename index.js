@@ -48,7 +48,7 @@ mongoose.connect(process.env.MONGO_URI || "mongodb+srv://sarthak:sarthak@testser
 
 // Use CORS for Cross Origin Resource Sharing
 app.use(cors({
-  origin: "http://localhost:3001",
+  origin: "*",
   credentials: true
 }))
 
